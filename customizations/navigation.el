@@ -58,5 +58,8 @@
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 
-;; projectile everywhere!
-(projectile-global-mode)
+(require 'projectile)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+
+;; (setq projectile-project-search-path '("~/my-path-to-code-projects/"))
