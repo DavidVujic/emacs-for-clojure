@@ -1,15 +1,14 @@
-;;;;
-;; Packages
-;;;;
-
 ;; Define package repositories
 (require 'package)
+
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
+;; these packages should be pinned to the stable archive
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(projectile . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
 
 
@@ -71,7 +70,19 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; clojure linter
+    flycheck-clj-kondo
+
+    ;; shell integration ant PATH sync
+    exec-path-from-shell
+
+    ;; jump to definition
+    dumb-jump
+
+    ;; code completion
+    company))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -135,15 +146,14 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
- '(package-selected-packages
-   (quote
-    (magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell))))
+ '(package-selected-packages (quote (spinner sesman queue parseedn))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
