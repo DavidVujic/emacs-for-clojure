@@ -67,3 +67,12 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; enable special chars in the editor, like tilde.
+(load-library "iso-transl")
+
+;; auto complete
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; jump to definition
+(dumb-jump-mode)
