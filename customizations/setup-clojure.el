@@ -84,3 +84,4 @@
 
 ;; clojure linter
 (require 'flycheck-clj-kondo)
+(global-flycheck-mode)
