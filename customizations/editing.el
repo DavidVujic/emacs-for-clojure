@@ -76,3 +76,4 @@
 
 ;; jump to definition
 (dumb-jump-mode)
+(set-default 'truncate-lines t)
