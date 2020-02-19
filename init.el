@@ -10,6 +10,7 @@
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(projectile . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(editorconfig . "melpa-stable") t)
 
 
 ;; Load and activate emacs packages. Do this first so that the
@@ -82,7 +83,9 @@
     dumb-jump
 
     ;; code completion
-    company))
+    company
+    
+    editorconfig))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a

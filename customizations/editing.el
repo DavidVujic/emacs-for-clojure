@@ -77,3 +77,4 @@
 ;; jump to definition
 (dumb-jump-mode)
 (set-default 'truncate-lines t)
+(editorconfig-mode 1)
