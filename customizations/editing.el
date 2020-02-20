@@ -76,5 +76,7 @@
 
 ;; jump to definition
 (dumb-jump-mode)
+(global-set-key (kbd "C-M-å") 'dumb-jump-back)
+
 (set-default 'truncate-lines t)
 (editorconfig-mode 1)
