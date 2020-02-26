@@ -80,3 +80,6 @@
 
 (set-default 'truncate-lines t)
 (editorconfig-mode 1)
+
+(global-set-key [(control shift up)]  'move-text-up)
+(global-set-key [(control shift down)]  'move-text-down)
