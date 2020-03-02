@@ -20,7 +20,7 @@
   (scroll-bar-mode -1))
 
 (load-theme 'sanityinc-tomorrow-bright t)
-(set-face-attribute 'default nil :height 142 :font "Fira Code")
+(set-face-attribute 'default nil :height 142 :font "DejaVu Sans Mono")
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
