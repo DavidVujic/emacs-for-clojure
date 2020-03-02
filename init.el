@@ -73,6 +73,9 @@
     ;; git integration
     magit
 
+    ;; syntax checking for many languages
+    flycheck
+
     ;; clojure linter
     flycheck-clj-kondo
 
@@ -91,7 +94,13 @@
 
     multiple-cursors
 
-    color-theme-sanityinc-tomorrow))
+    color-theme-sanityinc-tomorrow
+
+    ;; python
+    elpy
+
+    ;; python code formatter
+    blacken))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -155,6 +164,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-python.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

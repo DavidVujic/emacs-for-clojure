@@ -68,7 +68,7 @@
 
 (setq electric-indent-mode nil)
 
-;; enable special chars in the editor, like tilde.
+;; enable special chars in the editor, like ~ and ^.
 (load-library "iso-transl")
 
 ;; auto complete
