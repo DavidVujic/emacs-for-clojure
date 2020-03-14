@@ -100,7 +100,13 @@
     elpy
 
     ;; python code formatter
-    blacken))
+    blacken
+
+    ;; js, jsx, css, html
+    web-mode
+
+    ;; add local node modules to path
+    add-node-modules-path))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -179,3 +185,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+ 

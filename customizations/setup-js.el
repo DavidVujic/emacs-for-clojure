@@ -8,3 +8,21 @@
      (require 'tagedit)
      (tagedit-add-paredit-like-keybindings)
      (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
+
+
+(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode)) ;; auto-enable for .js/.jsx files
+
+(setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
+
+(require 'flycheck)
+
+;; add local node modules to path
+(add-hook 'flycheck-mode-hook 'add-node-modules-path)
+
+;; disable default jslint
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint json-jsonlist)))
+
+; Enable eslint checker for web-mode
+(flycheck-add-mode 'javascript-eslint 'web-mode)
