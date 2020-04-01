@@ -16,29 +16,31 @@
   (package-refresh-contents))
 
 (defvar my-packages
-  '(paredit
+  '(add-node-modules-path
+    blacken
+    cider
     clojure-mode
     clojure-mode-extra-font-locking
-    cider
-    ido-completing-read+
-    smex
-    projectile
-    rainbow-delimiters
-    tagedit
-    magit
+    color-theme-sanityinc-tomorrow
+    company
+    dumb-jump
+    editorconfig
+    elpy
+    exec-path-from-shell
     flycheck
     flycheck-clj-kondo
-    exec-path-from-shell
-    dumb-jump
-    company
-    editorconfig
+    ido-completing-read+
+    magit
+    markdown-mode
     move-text
     multiple-cursors
-    color-theme-sanityinc-tomorrow
-    elpy
-    blacken
-    web-mode
-    add-node-modules-path))
+    pandoc-mode
+    paredit
+    projectile
+    rainbow-delimiters
+    smex
+    tagedit
+    web-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -55,8 +57,18 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-python.el")
+(load "setup-markdown.el")
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
  '(package-selected-packages (quote (spinner sesman queue parseedn))))
-(custom-set-faces)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
