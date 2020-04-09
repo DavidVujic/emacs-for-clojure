@@ -10,3 +10,6 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; "suspend-frame" command, too easy to press it by mistake
+(global-unset-key (kbd "C-z"))
