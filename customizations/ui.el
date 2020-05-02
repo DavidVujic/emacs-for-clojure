@@ -67,8 +67,7 @@
       mac-command-modifier 'meta
       x-select-enable-clipboard t))
 
-;; Replace highlighted text when you type
-(delete-selection-mode 1)
+(setq-default cursor-type 'bar)
 
 ;; Prevent re-centering when going up and down buffer with arrow keys
 (setq scroll-conservatively 101)

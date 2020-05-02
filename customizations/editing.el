@@ -74,4 +74,5 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-(setq-default cursor-type 'bar)
+;; Replace highlighted text when you type
+(delete-selection-mode 1)
