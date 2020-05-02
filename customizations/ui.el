@@ -61,3 +61,9 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; Replace highlighted text when you type
+(delete-selection-mode 1)
+
+;; Prevent re-centering when going up and down buffer with arrow keys
+(setq scroll-conservatively 101)
